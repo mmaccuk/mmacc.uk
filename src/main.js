@@ -5,6 +5,7 @@ import store from './store';
 import './registerServiceWorker';
 
 Vue.config.productionTip = false;
+router.replace('/home');
 
 new Vue({
   router,
