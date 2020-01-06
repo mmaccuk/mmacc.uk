@@ -12,11 +12,11 @@ deploy:
   secret_access_key:
     secure: ieSCv30/btrcWwO3EELuYmyOS77UZ3B4Cf8neMaLO3ujgHdrb24jHQpaNk90a0Gj+4yZwr9mDDZhowzK0mC1xOZI3j0JNSPzOadGuzfV8t2qyCyKRzzU3pSRY65Z8msLbUhoe4WVNcVqI/h8FFvegnp8k8I175plMFKefFCgC5JZtdSpOjB86VwenOC2/kI9OQbZtyZ43Zq1GvSg2k+UAUgW1/kVnpx4GpD1cpOgjxLO3Aa+l2DxQqitancbq791ozQ77Wk/elEbrkRthzRHazfh3+rjrmR8PkoHzmwMm3Xv9eRdUk501af05UlrXcwTWkrWf5QWA68yBXOxJeVaiO1tQCc8s9icOIAAvrmSFwpwzHFZ3QYUcCPgrxz/F3izYxs0pQtmLMOIomw9NcS4ICDbUhj/FHnsVysVZdasrq6YXRWUktyq7scfjmkPO1O+0Dw2isurkcss+eTlKWN6Xq1PjHSt7uH1U/4f/J1ies5RGejRRvNTqlwtv7rqcnc28eCytfE7m14LzQlcL5hwa9XwwNW1qhx1T8kZDMdAU4pwU3QCyxOIicqZthdpDsQp8zBLxjWi4ZwKnLQj3aZuXDVBJNEH8RtgJMxS30/nmgCQQTAr58iRyClVuPbNcRfYCvIib4Qu9LaY61V/Wgp3loKJJMzp4cOD5TElcbPMu3Q=
   bucket: beta.mmacc.uk
-  local-dir: dist
+  local_dir: dist
   skip_cleanup: true
-  acl: public-read
+  acl: "public-read"
   detect_encoding: true
-  cache_control: public, max-age=31536000
+  cache_control: "public, max-age=31536000"
   on:
     branch: master
     repo: mmaccuk/mmacc.uk
