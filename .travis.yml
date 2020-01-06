@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+- 8
+cache:
+  directories:
+  - node_modules
+script:
+- npm run test
+- npm run build
+after_success:
+- npm run coverage
+deploy:
+  provider: gcs
+  access_key_id: GOOG1ENAYHGORXBXNAA32URJ45Z52HKRWZ4O3OXODAD4OIXPG3H6HKNLUAHDI
+  secret_access_key:
+    secure: dvLAcx6Sj6UWqHtg5e1z0daGnYroaTbgHe2LNpjYAT764xfeGNvODE/urh/5mmbwHYZL67p2oTe/+VL5d2PWjkwMV5+mR1ljVm6V2A7gKVAJvSu9cUI0tumGuXVE4gj85ubZjup9Papj0XekBDplzX8WZg+kqHRB2SFUOaXsszOyD203q46XGssGIwl6Zpztm2hw4oT0viD8eN/fgl29abVblTyn3caLB9EU8YuPO0blIbSVTqBdnDs9l8CVqXYtNh7HUb8pYSetcuac1PtuAwcoz6I5/UZnltAYxKtgsG2Vbe7sp5UojpI1wynHxHFw9libQFFtQWc3w1zmRXtZUfZBgTmijSFKLY+0eLmHnOlJTNJYO3bjLQyZH3qrf5B8BoUbneXxitDlkQ+1dSdfX7gGU5poeDsCYdE281v14Bzaz81BfvfDXVJPrT6AH1w7HubjqvqczlIoqUkBScXZHE7OemvAqGHynTo/8cdIW0PdG3dn3Ji5Hy6xVoZb4rDh1fY2suwVRA6ctbp9WX1f9t3tB7wYWZUlxkeNEEkxqNPMCVEiRl6j9+IgKj27lcG10WQjFyvnqCCab+iHfVU6S2vdl2FsoaXwjEzaKMS0/+Xr+SvC/B+Zoj9jIZaTQt+xv5UrbovLjByF0x89mZHiOyQsQ789YZt1iIAQT3n6SUs=
+  bucket: beta.mmacc.uk
+  local-dir: dist
+  skip_cleanup: true
+  acl: public-read
+  detect_encoding: true
+  cache_control: public, max-age=31536000
+  on:
+    branch: master
+    repo: mmaccuk/mmacc.uk
