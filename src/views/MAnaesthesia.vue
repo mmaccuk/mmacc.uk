@@ -3,7 +3,7 @@
     <section id="one" class="wrapper style2">
       <div class="inner">
         <h1>Anaesthetics: Mersey</h1>
-        <h3>News and updates</h3>
+        <h3>Coming soon</h3>
         <!--
         <div class="box">
           <a href="#" class="button primary small f-r">Teaching</a>
